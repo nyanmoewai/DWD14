@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Love Nest</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="misc/bootstrap/css/bootstrap.min.css">
+  <script src="misc/jquery-3.1.0.min.js"></script>
+  <script src="misc/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="icon/favicon.ico" type="image/x-icon">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive-style.css">
+
+  <!-- Magnific Popup -->
+<link rel="stylesheet" href="misc/magnific-popup/magnific-popup.css" />
+<script src="misc/magnific-popup/jquery.magnific-popup.min.js"></script>
+<link rel="stylesheet" href="misc/magnific-popup/magnific-popup-style.css" />
+
+<!-- Scroll Magic -->
+<script src="misc/scrollMagic/minified/ScrollMagic.min.js"></script>
+<script src="misc/scrollMagic/minified/plugins/debug.addIndicators.min.js"></script>
+
+</head>
+<body>
+
+<!-- Overlay -->
+ <div class="overlay" onclick="hideOverlayAll()"></div>
+<!-- End overlay -->
+<!-- ############################ Promotions ################################# -->
+ <div class="promotions">
+   <div class="promotions-title">Promotions<span>&times;</span></div>
+   <p>
+     Sorry! There is no promotions for this seasons.
+     Please enter your email so that we can contact you when we promote.
+   </p>
+   <form action="#" method="post">
+     <input type="email" placeholder="Enter email" required="required"/>
+     <input type="submit" value="Submit" class="btn btn-primary">
+   </form>
+ </div>
+ <!-- ############################ Feed Back ################################## -->
+ <div class="feed-back" id="feed-back">
+   <div class="feed-back-title">Feed Back<span>&times;</span></div>
+
+   <form class="feed-back-form" action="#" method="post">
+     <label for="name">Name</label>
+     <input type="text" name="txtName" placeholder="Enter Name" id="name" required>
+
+     <label for="email">Email</label>
+     <input type="email" name="txtEmail" placeholder="Enter Email" id="email" required>
+
+     <label for="comment">Comment</label>
+     <textarea name="txtComment" rows="10" id="comment" required></textarea>
+
+     <input type="submit" name="btnSubmit" value="Send" class="btn btn-primary">
+   </form>
+ </div>
+
+<!-- Start Preloader -->
+<div id="preloader">
+    <img src="icon/heart-preloader.gif" alt="preloader" id="status">
+</div>
+<!-- End Preloader -->
+
+<!-- Start Navbar -->
+<div class="nav-bar">
+  <ul>
+    <li id="logo"><span style="color: #ff3232 !important;">Love</span> Nest</li>
+    <li><a href="#home">Home</a></li>
+    <li id="main-menu">
+      <a href="#pre-wedding">Services
+        <span class="caret caret-dropdown"></span>
+      </a>
+      <!-- Sub-menu -->
+        <ul class="sub-menu">
+          <li><a href="#pre-wedding">Pre-Wedding</a></li>
+          <li><a href="#family">Family</a></li>
+          <li><a href="#baby">Baby</a></li>
+        </ul>
+      <!-- End Sub-menu -->
+    </li>
+    <li><a onclick="promotions()" style="cursor: pointer">Promotions</a></li>
+    <li><a href="#about-us">About Us</a></li>
+    <li><a onclick="feedBack()" style="cursor: pointer">Feed Back</a></li>
+    <li><a href="#contact-us">Contact Us</a></li>
+  </ul>
+
+  <!-- Humberger Menu -->
+    <div class="humberger-menu">
+      <div class="humberger"></div>
+      <div class="humberger"></div>
+      <div class="humberger"></div>
+    </div>
+  <!-- End Humberger Menu -->
+
+</div>
+<!-- End Navbar -->
+
+<!-- Humberger Menu -->
+  <div class="wrap-humberger-menu">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li id="humberger-main-menu">
+        <a href="#pre-wedding">Services
+          <span class="caret caret-dropdown"></span>
+        </a>
+        <!-- Sub-menu -->
+          <ul class="humberger-sub-menu">
+            <li><a href="#pre-wedding">Pre-Wedding</a></li>
+            <li><a href="#family">Family</a></li>
+            <li><a href="#baby">Baby</a></li>
+          </ul>
+        <!-- End Sub-menu -->
+      </li>
+      <li><a onclick="promotions()" style="cursor: pointer">Promotions</a></li>
+      <li><a href="#about-us">About Us</a></li>
+      <li><a onclick="feedBack()" style="cursor: pointer">Feed Back</a></li>
+      <li><a href="#contact-us">Contact Us</a></li>
+    </ul>
+  </div>
+<!-- End Humber Menu -->
+
+<div id="home"></div>
+<div class="container-carousel">
+  <!-- Start Carousel -->
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="photo/carousel-1.jpeg">
+        <div class="carousel-caption">
+          <a href="#contact-us">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="photo/carousel-2.jpeg">
+        <div class="carousel-caption">
+          <a href="#contact-us">Contact Us</a>
+        </div>
+      </div>
+
+      <div class="item">
+        <img src="photo/carousel-3.jpeg">
+        <div class="carousel-caption">
+          <a href="#contact-us">Contact Us</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div> <!-- Container Endding -->
+<!-- End Carousel -->
+
+<!-- ############################ Home ####################################### -->
+<div class="home">
+  <div class="services">
+    <div class="pre-wedding" id="pre-wedding">
+      <div class="gallery">
+        <a href="photo/pre-1.jpg"><img src="photo/pre-1.jpg" alt="pre-1.jpg"></a>
+        <a href="reserve-photo/1-2.jpg"></a>
+        <a href="reserve-photo/1-3.jpg"></a>
+        <a href="reserve-photo/1-4.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-2.jpg"><img src="photo/pre-2.jpg" alt="pre-2.jpg"></a>
+        <a href="reserve-photo/2-2.jpg"></a>
+        <a href="reserve-photo/2-3.jpg"></a>
+        <a href="reserve-photo/2-4.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-3.jpg"><img src="photo/pre-3.jpg" alt="pre-3.jpg"></a>
+        <a href="reserve-photo/3-2.jpg"></a>
+        <a href="reserve-photo/3-3.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-4.jpg"><img src="photo/pre-4.jpg" alt="pre-4.jpg"></a>
+        <a href="reserve-photo/4-2.jpg"></a>
+        <a href="reserve-photo/4-3.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-5.jpg"><img src="photo/pre-5.jpg" alt="pre-5.jpg"></a>
+        <a href="reserve-photo/5-2.jpg"></a>
+        <a href="reserve-photo/5-3.jpg"></a>
+        <a href="reserve-photo/5-4.jpg"></a>
+        <a href="reserve-photo/5-5.jpg"></a>
+        <a href="reserve-photo/5-6.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-6.jpg"><img src="photo/pre-6.jpg" alt="pre-6.jpg"></a>
+        <a href="reserve-photo/6-2.jpg"></a>
+        <a href="reserve-photo/6-3.jpg"></a>
+        <a href="reserve-photo/6-4.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-7.jpg"><img src="photo/pre-7.jpg" alt="pre-7.jpg"></a>
+        <a href="reserve-photo/7-2.jpg"></a>
+        <a href="reserve-photo/7-3.jpg"></a>
+        <a href="reserve-photo/7-4.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-8.jpg"><img src="photo/pre-8.jpg" alt="pre-8.jpg"></a>
+        <a href="reserve-photo/8-2.jpg"></a>
+        <a href="reserve-photo/8-3.jpg"></a>
+        <a href="reserve-photo/8-4.jpg"></a>
+        <a href="reserve-photo/8-5.jpg"></a>
+      </div>
+      <div class="gallery">
+        <a href="photo/pre-9.jpg"><img src="photo/pre-9.jpg" alt="pre-9.jpg"></a>
+        <a href="reserve-photo/9-2.jpg"></a>
+        <a href="reserve-photo/9-3.jpg"></a>
+        <a href="reserve-photo/9-4.jpg"></a>
+        <a href="reserve-photo/9-5.jpg"></a>
+      </div>
+      <span class="more">
+        <a href="#">Pre-wedding
+            <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span>
+        </a>
+      </span>
+    </div>
+    <div class="family" id="family">
+      <div class="gallery"><a href="photo/fam-1.jpg"><img src="photo/fam-1.jpg" alt="fam-1.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-2.jpg"><img src="photo/fam-2.jpg" alt="fam-2.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-3.jpg"><img src="photo/fam-3.jpg" alt="fam-3.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-4.jpg"><img src="photo/fam-4.jpg" alt="fam-4.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-5.jpg"><img src="photo/fam-5.jpg" alt="fam-5.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-6.jpg"><img src="photo/fam-6.jpg" alt="fam-6.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-7.jpg"><img src="photo/fam-7.jpg" alt="fam-7.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-8.jpg"><img src="photo/fam-8.jpg" alt="fam-8.jpg"></a></div>
+      <div class="gallery"><a href="photo/fam-9.jpg"><img src="photo/fam-9.jpg" alt="fam-9.jpg"></a></div>
+      <span class="more">
+        <a href="#">Family
+            <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span>
+        </a>
+      </span>
+    </div>
+    <div class="baby" id="baby">
+      <div class="gallery"><a href="photo/baby-1.jpg"><img src="photo/baby-1.jpg" alt="baby-1.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-2.jpg"><img src="photo/baby-2.jpg" alt="baby-2.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-3.jpg"><img src="photo/baby-3.jpg" alt="baby-3.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-4.jpg"><img src="photo/baby-4.jpg" alt="baby-4.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-5.jpg"><img src="photo/baby-5.jpg" alt="baby-5.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-6.jpg"><img src="photo/baby-6.jpg" alt="baby-6.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-7.jpg"><img src="photo/baby-7.jpg" alt="baby-7.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-8.jpg"><img src="photo/baby-8.jpg" alt="baby-8.jpg"></a></div>
+      <div class="gallery"><a href="photo/baby-9.jpg"><img src="photo/baby-9.jpg" alt="baby-9.jpg"></a></div>
+      <span class="more">
+        <a href="#">Baby
+            <span>&raquo;</span><span>&raquo;</span><span>&raquo;</span><span>&raquo;</span>
+        </a>
+      </span>
+    </div>
+  </div>
+ <!-- ############################ About Us ################################### -->
+  <div class="container about-us" id="about-us">
+      <p class="section-heading">About Us</p>
+      <div class="row about-section">
+        <div class="col-*-12">
+          <div class="about-image">
+            <img src="photo/about-1.jpg" alt="about-1.jpg">
+          </div>
+          <div class="about-text">
+            <strong>Dolly</strong>&nbsp;<em>Admin</em><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> <!--1st row-->
+      <div class="row about-section">
+        <div class="col-*-12">
+          <div class="about-image">
+            <img src="photo/about-2.jpg" alt="about-2.jpg">
+          </div>
+          <div class="about-text">
+            <strong>Honey</strong>&nbsp;<em>Dress and Costume Designer</em><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> <!--2nd row-->
+      <div class="row about-section">
+        <div class="col-*-12">
+          <div class="about-image">
+            <img src="photo/about-3.jpg" alt="about-3.jpg">
+          </div>
+          <div class="about-text">
+            <strong>Cathrine</strong>&nbsp;<em>Hair and Make-up Designer</em><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> <!--3rd row-->
+      <div class="row about-section">
+        <div class="col-*-12">
+          <div class="about-image">
+            <img src="photo/about-4.jpg" alt="about-4.jpg">
+          </div>
+          <div class="about-text">
+            <strong>Sophia</strong>&nbsp;<em>Graphic Designer</em><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> <!--4th row-->
+      <div class="row about-section">
+        <div class="col-*-12">
+          <div class="about-image">
+            <img src="photo/about-5.jpg" alt="about-5.jpg">
+          </div>
+          <div class="about-text">
+            <strong>John</strong>&nbsp;<em>Professional Photographer</em><br><br>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          </div>
+        </div>
+      </div> <!--5th row-->
+   </div><!--End of about us container-->
+  <div id="contact-us"></div> <!--Contact us cover-->
+</div> <!--End of div.home-->
+
+<!-- ############################ Contact Us ################################# -->
+<div class="contact-us">
+  <div class="back-wall">
+    <div class="contact-information">
+      <p class="section-heading contact-us-heading">Contact Us</p>
+      <table>
+        <tr>
+          <td>Phone</td><td>::</td><td>(+95) 9111-111-111</td>
+        </tr>
+        <tr>
+          <td></td><td></td><td>(+95) 9222-222-222</td>
+        </tr>
+        <tr>
+          <td></td><td></td><td>(+95) 9333-333-333</td>
+        </tr>
+        <tr>
+          <td>Email</td><td>::</td>
+          <td><a href="mailto:lovenest@gmail.com">lovenest@gmail.com</a></td>
+        </tr>
+        <tr>
+          <td>Address</td><td>::</td>
+          <td>No(123/A), Thahtone str, Kamayut qtr, Yangon</td>
+        </tr>
+        <tr>
+          <td></td><td></td>
+          <td>(UDE compound, near KMD)</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="slide-door">
+    <div class="left-slide-door"><span style="color: #ff3232;">Love</span></div>
+    <div class="right-slide-door"><span>Nest</span></div>
+  </div>
+<!-- ############################## Footer ################################# -->
+  <div class="footer" id="footer">
+    Copyright <span style="color: #ff3232;">&copy;</span> 2017; All Right Reserved;
+  </div>
+</div>
+
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="misc/magnific-popup/magnific-popup-script.js"></script>
+</body>
+</html>
